@@ -30,3 +30,15 @@
 
 // const elemento = document.getElementById('root')
 // elemento.appendChild(lista)
+
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PrimeiroComponente from './Componentes/PrimeiroComponente'
+
+const elemento = document.getElementById('root')
+
+ReactDOM.render(<div>
+    <PrimeiroComponente></PrimeiroComponente>
+</div>
+    , elemento)
