@@ -2,6 +2,8 @@ import "./App.css";
 
 import React from "react";
 
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Familia from "./components/basicos/Familia";
@@ -17,6 +19,12 @@ export default (props) => {
       <h1>Fundamentos React (Arrow)</h1>
 
       <div className="Cards">
+        <Card titulo="Par ou Impar" color="#080">
+          <ParOuImpar numero="03"></ParOuImpar>
+          <UsuarioInfo usuario={{nome: 'Fernando'}}></UsuarioInfo>
+          <UsuarioInfo usuario={{email: 'ztiago@gmail.com'}}></UsuarioInfo>
+        </Card>
+
         <Card titulo="Lista de repetição" color="#080">
           <ListaAlunos></ListaAlunos>
         </Card>
