@@ -2,6 +2,10 @@ import "./App.css";
 
 import React from "react";
 
+import Contador from "./components/contador/Contador";
+import Input from "./components/formulario/Input";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import DiretaPai from "./components/comunicacao/DiretaPai";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
@@ -19,10 +23,26 @@ export default (props) => {
       <h1>Fundamentos React (Arrow)</h1>
 
       <div className="Cards">
+        <Card titulo="Contador" color="#080">
+          <Contador numeroInicial={10}></Contador>
+        </Card>
+
+        <Card titulo="Componente controlado" color="#080">
+          <Input></Input>
+        </Card>
+
+        <Card titulo="Comunicacao indireta!" color="#080">
+          <IndiretaPai></IndiretaPai>
+        </Card>
+
+        <Card titulo="Comunicacao direta!" color="#080">
+          <DiretaPai></DiretaPai>
+        </Card>
+
         <Card titulo="Par ou Impar" color="#080">
           <ParOuImpar numero="03"></ParOuImpar>
-          <UsuarioInfo usuario={{nome: 'Fernando'}}></UsuarioInfo>
-          <UsuarioInfo usuario={{email: 'ztiago@gmail.com'}}></UsuarioInfo>
+          <UsuarioInfo usuario={{ nome: "Fernando" }}></UsuarioInfo>
+          <UsuarioInfo usuario={{ email: "ztiago@gmail.com" }}></UsuarioInfo>
         </Card>
 
         <Card titulo="Lista de repetição" color="#080">
